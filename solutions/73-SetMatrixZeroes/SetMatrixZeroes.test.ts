@@ -1,7 +1,7 @@
 import { setZeroes } from "./SetMatrixZeroes";
 
 describe('SetMatrixZeroes', () => {
-  test("Test 1", () => {
+  it("Test 1", () => {
     const matrix = [
       [1, 2, 3],
       [4, 0, 6],
@@ -17,7 +17,7 @@ describe('SetMatrixZeroes', () => {
     ]);
   });
 
-  test("Test 2", () => {
+  it("Test 2", () => {
     const matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]];
 
     setZeroes(matrix);
@@ -26,7 +26,7 @@ describe('SetMatrixZeroes', () => {
     );
   });
 
-  test("Test 3", () => {
+  it("Test 3", () => {
     const matrix = [[1,0]];
 
     setZeroes(matrix);
