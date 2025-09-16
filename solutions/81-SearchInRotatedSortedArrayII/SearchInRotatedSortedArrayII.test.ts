@@ -9,4 +9,8 @@ describe('SearchInRotatedSortedArrayII', () => {
     expect(search([2,5,6,0,0,1,2], 3)).toEqual(false);
   });
 
+  it('Test 3', () => {
+    expect(search([1,1,1,1,1,1,1,1,1,13,1,1,1,1,1,1,1,1,1,1,1,1], 13)).toEqual(true);
+  });
+
 });
