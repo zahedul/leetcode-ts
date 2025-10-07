@@ -8,7 +8,7 @@ export function mySqrt(x: number): number {
   let res = 0;
 
   while (l <= r) {
-    let mid = l + Math.floor((r - l) / 2);
+    const mid = l + Math.floor((r - l) / 2);
 
     if (mid * mid == x) {
       return mid;

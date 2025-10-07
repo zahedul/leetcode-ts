@@ -1,9 +1,9 @@
 export function validTree(n: number, edges: number[][]): boolean {
-  if (edges.length > n - 1 ) {
+  if (edges.length > n - 1) {
     return false;
   }
 
-  const adj: number[][] = Array.from({ length: n}, () => []);
+  const adj: number[][] = Array.from({ length: n }, () => []);
   for (const [u, v] of edges) {
     adj[u].push(v);
     adj[v].push(u);
@@ -21,7 +21,7 @@ export function validTree(n: number, edges: number[][]): boolean {
       if (nei === parent) {
         continue;
       }
-      if(!dfs(nei, node)) {
+      if (!dfs(nei, node)) {
         return false;
       }
     }

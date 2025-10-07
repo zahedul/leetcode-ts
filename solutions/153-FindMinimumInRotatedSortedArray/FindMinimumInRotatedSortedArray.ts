@@ -8,7 +8,7 @@ export function findMin(nums: number[]): number {
       result = Math.min(result, nums[left]);
       break;
     }
-    let mid = Math.floor((left + right) / 2);
+    const mid = Math.floor((left + right) / 2);
 
     result = Math.min(result, nums[mid]);
     if (nums[mid] >= nums[left]) {

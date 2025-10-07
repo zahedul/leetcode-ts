@@ -3,7 +3,9 @@ export function numSubarrayProductLessThanK(nums: number[], k: number): number {
     return 0;
   }
 
-  let product = 1, left = 0, result = 0;
+  let product = 1,
+    left = 0,
+    result = 0;
 
   for (let right = 0; right < nums.length; right++) {
     product *= nums[right];
@@ -11,7 +13,7 @@ export function numSubarrayProductLessThanK(nums: number[], k: number): number {
       product /= nums[left];
       left += 1;
     }
-    result += (right - left + 1);
+    result += right - left + 1;
   }
 
   return result;

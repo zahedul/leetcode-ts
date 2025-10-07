@@ -9,12 +9,11 @@ export function findMinArrowShots(points: number[][]): number {
     if (current[0] <= prev[1]) {
       result -= 1;
 
-      prev = [current[0], Math.min(current[1], prev[1]) ];
+      prev = [current[0], Math.min(current[1], prev[1])];
     } else {
       prev = current;
     }
   }
-
 
   return result;
 }

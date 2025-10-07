@@ -1,8 +1,8 @@
-import {findDisappearedNumbers} from "./FindAllNumbersDisappearedInAnArray";
+import { findDisappearedNumbers } from './FindAllNumbersDisappearedInAnArray';
 
 describe('FindAllNumbersDisappearedInAnArray', () => {
   it('Test 1', () => {
-    expect(findDisappearedNumbers([4,3,2,7,8,2,3,1])).toEqual([5, 6]);
+    expect(findDisappearedNumbers([4, 3, 2, 7, 8, 2, 3, 1])).toEqual([5, 6]);
   });
 
   it('Test 2', () => {

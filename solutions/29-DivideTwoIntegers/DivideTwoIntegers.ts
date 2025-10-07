@@ -6,14 +6,14 @@ export function divide(dividend: number, divisor: number): number {
     return INT_MAX;
   }
 
-  let sign = (dividend > 0) === (divisor > 0) ? 1 : -1;
+  const sign = dividend > 0 === divisor > 0 ? 1 : -1;
 
   let a = Math.abs(dividend);
-  let b = Math.abs(divisor);
+  const b = Math.abs(divisor);
   let result = 0;
 
   for (let i = 30; i >= 0; i--) {
-    if ((a >>> i) >= b) {
+    if (a >>> i >= b) {
       result += 1 << i;
       a -= b << i;
     }

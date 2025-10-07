@@ -1,11 +1,11 @@
-import { setZeroes } from "./SetMatrixZeroes";
+import { setZeroes } from './SetMatrixZeroes';
 
 describe('SetMatrixZeroes', () => {
-  it("Test 1", () => {
+  it('Test 1', () => {
     const matrix = [
       [1, 2, 3],
       [4, 0, 6],
-      [7, 8, 9]
+      [7, 8, 9],
     ];
 
     setZeroes(matrix);
@@ -13,24 +13,31 @@ describe('SetMatrixZeroes', () => {
     expect(matrix).toEqual([
       [1, 0, 3],
       [0, 0, 0],
-      [7, 0, 9]
+      [7, 0, 9],
     ]);
   });
 
-  it("Test 2", () => {
-    const matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]];
+  it('Test 2', () => {
+    const matrix = [
+      [0, 1, 2, 0],
+      [3, 4, 5, 2],
+      [1, 3, 1, 5],
+    ];
 
     setZeroes(matrix);
 
-    expect(matrix).toEqual([[0,0,0,0],[0,4,5,0],[0,3,1,0]]
-    );
+    expect(matrix).toEqual([
+      [0, 0, 0, 0],
+      [0, 4, 5, 0],
+      [0, 3, 1, 0],
+    ]);
   });
 
-  it("Test 3", () => {
-    const matrix = [[1,0]];
+  it('Test 3', () => {
+    const matrix = [[1, 0]];
 
     setZeroes(matrix);
 
-    expect(matrix).toEqual([[0,0]]);
+    expect(matrix).toEqual([[0, 0]]);
   });
 });

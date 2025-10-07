@@ -1,6 +1,12 @@
-export function canFinish(numCourses: number, prerequisites: number[][]): boolean {
+export function canFinish(
+  numCourses: number,
+  prerequisites: number[][]
+): boolean {
   const inDegree: number[] = new Array(numCourses).fill(0);
-  const graph: number[][] = Array.from({ length: numCourses }, (): number[] => []);
+  const graph: number[][] = Array.from(
+    { length: numCourses },
+    (): number[] => []
+  );
 
   for (const [course, pre] of prerequisites) {
     graph[pre].push(course);
@@ -21,7 +27,7 @@ export function canFinish(numCourses: number, prerequisites: number[][]): boolea
     for (const neighbor of graph[curr]) {
       inDegree[neighbor] -= 1;
       if (inDegree[neighbor] === 0) {
-        queue.push(neighbor)
+        queue.push(neighbor);
       }
     }
   }

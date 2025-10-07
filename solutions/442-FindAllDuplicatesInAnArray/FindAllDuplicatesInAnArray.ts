@@ -1,5 +1,5 @@
 export function findDuplicates(nums: number[]): number[] {
-  let result: number[] = [];
+  const result: number[] = [];
 
   for (let i = 0; i < nums.length; i++) {
     const index = Math.abs(nums[i]) - 1;

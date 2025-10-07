@@ -1,7 +1,7 @@
 export function numIslands(grid: string[][]): number {
   let result: number = 0;
 
-  if (!grid || grid.length===0) {
+  if (!grid || grid.length === 0) {
     return result;
   }
 
@@ -9,15 +9,11 @@ export function numIslands(grid: string[][]): number {
   const cols: number = grid[0].length;
 
   function dfs(r: number, c: number) {
-
-    if (
-      r < 0 || c < 0 ||
-      r >= rows || c >= cols
-    ) {
+    if (r < 0 || c < 0 || r >= rows || c >= cols) {
       return;
     }
 
-    const isVisited = (grid[r][c] == '0');
+    const isVisited = grid[r][c] == '0';
     if (isVisited) {
       return;
     }

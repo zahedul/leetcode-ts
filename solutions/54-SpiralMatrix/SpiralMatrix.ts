@@ -1,7 +1,9 @@
 export function spiralOrder(matrix: number[][]): number[] {
-  let result: number[] = [];
-  let left: number = 0, right: number = matrix[0].length;
-  let top: number = 0, bottom: number = matrix.length;
+  const result: number[] = [];
+  let left: number = 0,
+    right: number = matrix[0].length;
+  let top: number = 0,
+    bottom: number = matrix.length;
 
   while (left < right && top < bottom) {
     for (let i = left; i < right; i++) {
@@ -27,7 +29,6 @@ export function spiralOrder(matrix: number[][]): number[] {
       result.push(matrix[i][left]);
     }
     left++;
-
   }
 
   return result;

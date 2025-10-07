@@ -14,14 +14,13 @@ export function myPow(x: number, n: number): number {
     }
 
     return x * result;
-
   }
 
-  let result: number = helper(x, Math.abs(n));
+  const result: number = helper(x, Math.abs(n));
 
-  if ( n > 0) {
+  if (n > 0) {
     return result;
   }
 
-  return 1/result;
+  return 1 / result;
 }

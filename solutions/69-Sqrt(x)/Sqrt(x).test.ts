@@ -1,4 +1,4 @@
-import {mySqrt} from "./Sqrt(x)";
+import { mySqrt } from './Sqrt(x)';
 
 describe('Sqrt(x)', () => {
   it('Test 1', () => {

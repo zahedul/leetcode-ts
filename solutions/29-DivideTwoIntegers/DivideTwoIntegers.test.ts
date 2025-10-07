@@ -1,4 +1,4 @@
-import {divide} from "./DivideTwoIntegers";
+import { divide } from './DivideTwoIntegers';
 
 describe('DivideTwoIntegers', () => {
   it('Test 1', () => {

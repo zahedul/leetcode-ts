@@ -1,4 +1,4 @@
-import {numSubarrayProductLessThanK} from "./SubarrayProductLessThanK";
+import { numSubarrayProductLessThanK } from './SubarrayProductLessThanK';
 
 describe('SubarrayProductLessThanK', () => {
   it('Test 1', () => {

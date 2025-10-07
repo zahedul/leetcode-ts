@@ -1,5 +1,5 @@
 export function countComponents(n: number, edges: number[][]): number {
-  const adj: number[][] = Array.from({ length: n}, () => []);
+  const adj: number[][] = Array.from({ length: n }, () => []);
   const visit: boolean[] = Array(n).fill(false);
 
   for (const [a, b] of edges) {

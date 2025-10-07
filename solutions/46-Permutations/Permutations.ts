@@ -8,7 +8,7 @@ export function permute(nums: number[]): number[][] {
     }
 
     for (let i: number = 0; i < nums.length; i++) {
-      if(used[i]) {
+      if (used[i]) {
         continue;
       }
 
@@ -20,7 +20,7 @@ export function permute(nums: number[]): number[][] {
     }
   }
 
-  backtrack([], Array(nums.length).fill(false))
+  backtrack([], Array(nums.length).fill(false));
 
   return result;
 }

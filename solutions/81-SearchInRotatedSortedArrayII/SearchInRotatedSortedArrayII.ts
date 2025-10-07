@@ -3,7 +3,7 @@ export function search(nums: number[], target: number): boolean {
   let right: number = nums.length - 1;
 
   while (left <= right) {
-    let mid = Math.floor(left + (right - left) / 2);
+    const mid = Math.floor(left + (right - left) / 2);
 
     if (nums[mid] === target) {
       return true;
@@ -20,7 +20,6 @@ export function search(nums: number[], target: number): boolean {
       } else {
         right = mid - 1;
       }
-
     } else {
       left += 1;
     }

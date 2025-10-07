@@ -2,15 +2,15 @@ export function combinationSum3(k: number, n: number): number[][] {
   const result: number[][] = [];
 
   function backtrack(start: number, path: number[], sum: number) {
-    if ( path.length === k ) {
-      if ( sum === n) {
-        result.push([ ...path ]);
+    if (path.length === k) {
+      if (sum === n) {
+        result.push([...path]);
       }
       return;
     }
 
     for (let i = start; i < 10; i++) {
-      if ( sum + i > n ) {
+      if (sum + i > n) {
         break;
       }
 

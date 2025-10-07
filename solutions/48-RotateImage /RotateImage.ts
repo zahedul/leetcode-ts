@@ -7,7 +7,7 @@ export function rotate(matrix: number[][]): void {
       const top = l;
       const bottom = r;
 
-      let topLeft = matrix[top][l + i];
+      const topLeft = matrix[top][l + i];
 
       matrix[top][l + i] = matrix[bottom - i][l];
       matrix[bottom - i][l] = matrix[bottom][r - i];

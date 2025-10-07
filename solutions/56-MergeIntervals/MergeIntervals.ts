@@ -1,8 +1,8 @@
 export function merge(intervals: number[][]): number[][] {
-  let n = intervals.length;
+  const n = intervals.length;
   const result: number[][] = [];
 
-  if ( n === 0) {
+  if (n === 0) {
     return result;
   }
 

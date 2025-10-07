@@ -21,7 +21,7 @@ export function findMinHeightTrees(n: number, edges: number[][]): number[] {
   }
 
   while (leaves.length !== 0) {
-    if ( n <= 2) {
+    if (n <= 2) {
       return leaves;
     }
 

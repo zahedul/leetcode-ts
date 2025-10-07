@@ -4,7 +4,7 @@ export function maxProduct(nums: number[]): number {
   let minSoFar: number = nums[0];
 
   for (let i = 1; i < nums.length; i++) {
-    if (nums[i] < 0 ) {
+    if (nums[i] < 0) {
       [maxSoFar, minSoFar] = [minSoFar, maxSoFar];
     }
 

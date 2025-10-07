@@ -1,4 +1,8 @@
-export function findClosestElements(arr: number[], k: number, x: number): number[] {
+export function findClosestElements(
+  arr: number[],
+  k: number,
+  x: number
+): number[] {
   let left = 0;
   let right = arr.length - k;
 
