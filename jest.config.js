@@ -1,12 +1,13 @@
-const { createDefaultPreset } = require("ts-jest");
-
-const tsJestTransformCfg = createDefaultPreset().transform;
-
-/** @type {import("jest").Config} **/
-module.exports = {
-    preset: "ts-jest",
-    testEnvironment: "node",
-    transform: {
-    ...tsJestTransformCfg,
-    },
+// jest.config.js (ESM)
+export default {
+  preset: 'ts-jest/presets/default-esm',
+  testEnvironment: 'node',
+  transform: {
+    '^.+\\.tsx?$': ['ts-jest', { useESM: true }],
+  },
+  // helps when TS imports don’t include .js extension
+  moduleNameMapper: {
+    '^(\\.{1,2}/.*)\\.js$': '$1',
+  },
+  extensionsToTreatAsEsm: ['.ts'],
 };

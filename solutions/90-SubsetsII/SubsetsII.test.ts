@@ -1,0 +1,13 @@
+import { subsetsWithDup } from './SubsetsII';
+
+describe('Subsets II', () => {
+  it('Test 1', () => {
+    expect(subsetsWithDup([1, 2, 2])).toEqual(
+      expect.arrayContaining([[], [1], [1, 2], [1, 2, 2], [2], [2, 2]]),
+    );
+  });
+
+  it('Test 1', () => {
+    expect(subsetsWithDup([0])).toEqual(expect.arrayContaining([[], [0]]));
+  });
+});

@@ -1,33 +1,76 @@
-// eslint.config.js
 import js from '@eslint/js';
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
-import prettier from 'eslint-plugin-prettier';
+import prettierPlugin from 'eslint-plugin-prettier';
 
+/** @type {import('eslint').Linter.FlatConfig[]} */
 export default tseslint.config(
-    { ignores: ['dist', 'node_modules', 'coverage'] },
-    js.configs.recommended,
-    ...tseslint.configs.recommended,
-    {
-        files: ['**/*.ts'],
-        plugins: { prettier },
-        languageOptions: {
-            parser: tseslint.parser,
-            ecmaVersion: 'latest',
-            sourceType: 'module',
-            globals: {
-                ...globals.node,
-                ...globals.es2021,
-                // If you write Jest tests later:
-                // ...globals.jest,
-            },
+  {
+    ignores: ['dist', 'node_modules', 'coverage'],
+  },
+  js.configs.recommended,
+  ...tseslint.configs.recommended,
+  {
+    files: ['**/*.ts'],
+    plugins: { prettier: prettierPlugin },
+    languageOptions: {
+      parser: tseslint.parser,
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: {
+        ...globals.node,
+        ...globals.es2021,
+      },
+    },
+    rules: {
+      // ----- TypeScript rules -----
+      '@typescript-eslint/no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+      '@typescript-eslint/no-explicit-any': 'off',
+
+      // ----- Code quality -----
+      'no-console': 'off',
+      'no-debugger': 'warn',
+
+      // ----- Prettier integration -----
+      'prettier/prettier': [
+        'warn',
+        {
+          singleQuote: true,
+          semi: true,
+          trailingComma: 'all',
+          printWidth: 100,
         },
-        rules: {
-            // TS tweaks
-            '@typescript-eslint/no-unused-vars': 'warn',
-            '@typescript-eslint/no-explicit-any': 'off',
-            // Prettier as a lint rule
-            'prettier/prettier': 'warn',
+      ],
+    },
+  },
+  // Add this block for .js files (like jest.config.js)
+  {
+    files: ['**/*.js', '**/*.mjs', '**/*.cjs'],
+    plugins: { prettier: prettierPlugin },
+    languageOptions: {
+      ecmaVersion: 'latest',
+      sourceType: 'module',
+      globals: {
+        ...globals.node,
+        ...globals.es2021,
+      },
+    },
+    rules: {
+      // ----- Code quality -----
+      'no-console': 'off',
+      'no-debugger': 'warn',
+      'no-unused-vars': ['warn', { argsIgnorePattern: '^_' }],
+
+      // ----- Prettier integration -----
+      'prettier/prettier': [
+        'warn',
+        {
+          singleQuote: true,
+          semi: true,
+          trailingComma: 'all',
+          printWidth: 100,
         },
-    }
+      ],
+    },
+  },
 );

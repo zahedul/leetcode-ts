@@ -1,7 +1,4 @@
-export function findOrder(
-  numCourses: number,
-  prerequisites: number[][]
-): number[] {
+export function findOrder(numCourses: number, prerequisites: number[][]): number[] {
   const indegree: number[] = new Array(numCourses).fill(0);
   const adj: number[][] = Array.from({ length: numCourses }, () => []);
 

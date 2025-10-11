@@ -2,10 +2,10 @@
  * The knows API is defined in the parent class Relation.
  * isBadVersion(version: number): boolean {
  *     ...
- * };
+ * }
  */
 
-const solution = function (isBadVersion: any) {
+function solution(isBadVersion: any) {
   return function (n: number): number {
     let left = 1;
     let right = n;
@@ -22,4 +22,4 @@ const solution = function (isBadVersion: any) {
 
     return left;
   };
-};
+}

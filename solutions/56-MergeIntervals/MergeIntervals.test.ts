@@ -8,7 +8,7 @@ describe('MergeIntervals', () => {
         [2, 6],
         [8, 10],
         [15, 18],
-      ])
+      ]),
     ).toEqual([
       [1, 6],
       [8, 10],
@@ -21,7 +21,7 @@ describe('MergeIntervals', () => {
       merge([
         [1, 4],
         [4, 5],
-      ])
+      ]),
     ).toEqual([[1, 5]]);
   });
 
@@ -30,7 +30,7 @@ describe('MergeIntervals', () => {
       merge([
         [4, 7],
         [1, 4],
-      ])
+      ]),
     ).toEqual([[1, 7]]);
   });
 });

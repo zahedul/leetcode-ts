@@ -10,11 +10,8 @@ describe('SearchInRotatedSortedArrayII', () => {
   });
 
   it('Test 3', () => {
-    expect(
-      search(
-        [1, 1, 1, 1, 1, 1, 1, 1, 1, 13, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
-        13
-      )
-    ).toEqual(true);
+    expect(search([1, 1, 1, 1, 1, 1, 1, 1, 1, 13, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 13)).toEqual(
+      true,
+    );
   });
 });

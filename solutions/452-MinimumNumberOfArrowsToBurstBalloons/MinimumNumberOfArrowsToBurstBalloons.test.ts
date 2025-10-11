@@ -8,7 +8,7 @@ describe('MinimumNumberOfArrowsToBurstBalloons', () => {
         [2, 8],
         [1, 6],
         [7, 12],
-      ])
+      ]),
     ).toEqual(2);
   });
 
@@ -19,7 +19,7 @@ describe('MinimumNumberOfArrowsToBurstBalloons', () => {
         [3, 4],
         [5, 6],
         [7, 8],
-      ])
+      ]),
     ).toEqual(4);
   });
 
@@ -30,7 +30,7 @@ describe('MinimumNumberOfArrowsToBurstBalloons', () => {
         [2, 3],
         [3, 4],
         [4, 5],
-      ])
+      ]),
     ).toEqual(2);
   });
 });

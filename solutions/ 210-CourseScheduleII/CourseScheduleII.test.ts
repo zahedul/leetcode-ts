@@ -12,7 +12,7 @@ describe('Course Schedule II', () => {
         [2, 0],
         [3, 1],
         [3, 2],
-      ])
+      ]),
     ).toEqual([0, 2, 1, 3]);
   });
 

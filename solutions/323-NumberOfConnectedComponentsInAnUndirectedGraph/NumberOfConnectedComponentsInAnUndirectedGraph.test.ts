@@ -6,7 +6,7 @@ describe('NumberOfConnectedComponentsInAnUndirectedGraph', () => {
       countComponents(3, [
         [0, 1],
         [0, 2],
-      ])
+      ]),
     ).toEqual(1);
   });
 
@@ -17,7 +17,7 @@ describe('NumberOfConnectedComponentsInAnUndirectedGraph', () => {
         [1, 2],
         [2, 3],
         [4, 5],
-      ])
+      ]),
     ).toEqual(2);
   });
 });

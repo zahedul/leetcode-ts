@@ -1,7 +1,4 @@
-export function combinationSum2(
-  candidates: number[],
-  target: number
-): number[][] {
+export function combinationSum2(candidates: number[], target: number): number[][] {
   const result: number[][] = [];
 
   candidates.sort((a, b) => a - b);

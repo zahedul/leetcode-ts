@@ -10,7 +10,7 @@ describe('Course Schedule Test', () => {
       canFinish(2, [
         [1, 0],
         [0, 1],
-      ])
+      ]),
     ).toEqual(false);
   });
 
@@ -20,7 +20,7 @@ describe('Course Schedule Test', () => {
         [1, 0],
         [2, 1],
         [0, 2],
-      ])
+      ]),
     ).toEqual(false);
   });
 });

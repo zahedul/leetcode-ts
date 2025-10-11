@@ -8,7 +8,7 @@ describe('GraphValidTree', () => {
         [0, 2],
         [0, 3],
         [1, 4],
-      ])
+      ]),
     ).toBe(true);
   });
 
@@ -20,7 +20,7 @@ describe('GraphValidTree', () => {
         [2, 3],
         [1, 3],
         [1, 4],
-      ])
+      ]),
     ).toBe(false);
   });
 });

@@ -7,7 +7,7 @@ describe('MinimumHeightTrees', () => {
         [1, 0],
         [1, 2],
         [1, 3],
-      ])
+      ]),
     ).toEqual([1]);
   });
 
@@ -19,7 +19,7 @@ describe('MinimumHeightTrees', () => {
         [3, 2],
         [3, 4],
         [5, 4],
-      ])
+      ]),
     ).toEqual([3, 4]);
   });
 });
